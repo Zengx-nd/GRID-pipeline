@@ -1,0 +1,11 @@
+--cpu Cortex-M0+
+".\clk.o"
+".\uart.o"
+".\bl_core.o"
+".\ics.o"
+".\startup_skeaz1284.o"
+".\system_skeaz1284.o"
+--library_type=microlib --strict --scatter "TRK-KEA128_Lab1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\TRK-KEA128_Lab1.map" -o .\TRK-KEA128_Lab1.axf

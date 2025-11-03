@@ -1,0 +1,76 @@
+###############################################################################
+#
+# IAR ELF Linker V7.80.4.12462/W32 for ARM                16/Mar/2017  16:08:29
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        E:\KinetisCode\practice\KEA\UART
+#        bootloader\K64\mini-kibble\src\position-independent-code\Debug\Exe\flash_command_run.out
+#    Map file     =  
+#        E:\KinetisCode\practice\KEA\UART
+#        bootloader\K64\mini-kibble\src\position-independent-code\Debug\List\flash_command_run.map
+#    Command line =  
+#        "E:\KinetisCode\practice\KEA\UART
+#        bootloader\K64\mini-kibble\src\position-independent-code\Debug\Obj\flash_command_run.o"
+#        -o "E:\KinetisCode\practice\KEA\UART
+#        bootloader\K64\mini-kibble\src\position-independent-code\Debug\Exe\flash_command_run.out"
+#        --map "E:\KinetisCode\practice\KEA\UART
+#        bootloader\K64\mini-kibble\src\position-independent-code\Debug\List\flash_command_run.map"
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5_2\arm\CONFIG\generic_cortex.icf" --semihosting --entry
+#        flash_command_run --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"P1":  place in [from 0x00000000 to 0x0007ffff] { ro };
+
+  Section  Kind        Address  Size  Object
+  -------  ----        -------  ----  ------
+"P1":                            0xc
+  .text    ro code  0x00000000   0xc  flash_command_run.o [1]
+                  - 0x0000000c   0xc
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code
+    ------               -------
+E:\KinetisCode\practice\KEA\UART bootloader\K64\mini-kibble\src\position-independent-code\Debug\Obj: [1]
+    flash_command_run.o       12
+    ----------------------------
+    Total:                    12
+
+--------------------------------
+    Grand Total:              12
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                 Address  Size  Type      Object
+-----                 -------  ----  ----      ------
+flash_command_run  0x00000001   0xc  Code  Gb  flash_command_run.o [1]
+
+
+[1] = E:\KinetisCode\practice\KEA\UART bootloader\K64\mini-kibble\src\position-independent-code\Debug\Obj
+[2] = command line
+
+  12 bytes of readonly  code memory
+
+Errors: none
+Warnings: none

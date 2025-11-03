@@ -1,7 +1,7 @@
 import os
 from astropy.io import fits
-import numpy as np
 
+import numpy as np
 import utils
 import paths
 

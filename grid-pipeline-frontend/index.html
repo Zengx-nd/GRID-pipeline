@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天格数据可视化平台</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> </head>
+</head>
+
+
+<body class="bg-gray-100 dark:bg-gray-900">
+    
+    <header class="bg-white dark:bg-gray-800 shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-xl font-semibold text-gray-800 dark:text-white">GRID-科学数据可视化平台</h1>
+            
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="nav-link text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">首页</a></li>
+                    <li><a href="#" class="nav-link text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">数据查询</a></li>
+                    <li><a href="#" class="nav-link text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">可视化</a></li>
+                    <li><a href="#" class="nav-link text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">管理</a></li>
+                    <li><a href="#" class="nav-link text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">用户</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-700 rounded-full p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300">
+                <svg id="theme-toggle-light-icon" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2a5.216 5.216 0 010 10.5C6.682 12.5 4 9.818 4 6.5 4 2.91 7.034 0 10 0c2.966 0 6 2.91 6 6.5a5.216 5.216 0 010 10.5 5.216 5.216 0 01-5-5 5.216 5.216 0 01-5 5z"></path>
+                </svg>
+                <svg id="theme-toggle-dark-icon" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">选择载荷</h2>
+        <div class="grid grid-cols-1 gap-6 mb-6">
+            
+            <p>选择要查询的载荷，并查询文件列表</p>
+            
+            <label for="payload-type" class="block text-sm font-medium text-gray-700 dark:text-gray-200">载荷编号</label>
+            
+            <select id="payload-type" class="select mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                <option value="11B">GRID-11B</option>
+                <option value="12B">GRID-12B</option>
+                <option value="13B">GRID-13B</option>
+            </select>
+
+            <button id="get-dat-button" class="button w-full rounded-md py-2 px-4 font-semibold text-white shadow-md hover:bg-blue-700 transition duration-300">确定载荷</button>
+        </div>
+            
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">日志查询</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+            <div>
+                
+                <label for="dat-list-selection" class="block text-sm font-medium text-gray-700 dark:text-gray-200">选择dat文件</label>
+                <select id="dat-list-selection" size=10 class="select mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <option value="unable">请先确定载荷</option>
+                </select>
+                <p id="dat-results"></p>
+                <button id="get-unpacklog-button" class="button w-full rounded-md py-2 px-4 font-semibold text-white shadow-md hover:bg-blue-700 transition duration-300">查询解包日志</button>
+            </div>
+
+            <div>
+                <label for="unpack-log" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Unpack_log</label>
+                <textarea id="unpack-log" style="width: 600px; height: 250px; resize:horizontal"> this is unpack log </textarea>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">确定文件</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+            <div>
+                
+                <label for="unpacked-list-selection" class="block text-sm font-medium text-gray-700 dark:text-gray-200">选择unpacked文件</label>
+                <select id="unpacked-list-selection" size=10 class="select mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <option value="unable">请先确定dat文件</option>
+                </select>
+                <p id="unpacked-results"></p>
+                <button id="get-unpacked-info-button" class="button w-full rounded-md py-2 px-4 font-semibold text-white shadow-md hover:bg-blue-700 transition duration-300">查询解包文件信息</button>
+            </div>
+
+            <div>
+                <label for="unpacked-file-info" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Unpack_File_Info</label>
+                <textarea id="unpacked-file-info" style="width: 600px; height: 250px; resize:horizontal"> this is unpack file info </textarea>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-white dark:bg-gray-800 py-4 mt-8">
+        <div class="container mx-auto px-4 text-center text-gray-600 dark:text-gray-400">
+            &copy; 2024 科学数据可视化平台. 版权所有.
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script src="server.js"></script>
+    <script src="html.js"></script>
+</body>
+</html>

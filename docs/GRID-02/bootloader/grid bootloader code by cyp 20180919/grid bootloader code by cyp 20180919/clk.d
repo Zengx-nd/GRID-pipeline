@@ -1,0 +1,14 @@
+.\clk.o: Sources\CLK.c
+.\clk.o: .\Headers\CLK.h
+.\clk.o: .\Headers\derivative.h
+.\clk.o: D:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include\SKEAZ1284.h
+.\clk.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\clk.o: D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm0plus.h
+.\clk.o: D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h
+.\clk.o: D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h
+.\clk.o: D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h
+.\clk.o: D:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include\system_SKEAZ1284.h
+.\clk.o: .\Headers\typedefs.h
+.\clk.o: Sources\ics.h
+.\clk.o: .\Headers\derivative.h
+.\clk.o: D:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include\SKEAZ1284.h

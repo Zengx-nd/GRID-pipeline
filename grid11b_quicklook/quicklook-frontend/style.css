@@ -1,0 +1,138 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* 覆盖默认的 Tailwind CSS 样式以适应深色主题 */
+.dark {
+    background-color: #111827; /* 深灰色背景 */
+    color: #f9fafb; /* 浅灰色文本 */
+}
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #ffffff; /* 白色标题 */
+}
+.dark p {
+    color: #d1d5db; /* 稍浅的灰色段落文本 */
+}
+.dark .bg-gray-100 {
+    background-color: #1f2937; /* 更深的灰色背景 */
+}
+.dark .text-gray-800 {
+    color: #e5e7eb; /* 较浅的灰色文本 */
+}
+.dark .border-gray-300 {
+    border-color: #4b5563; /* 更深的灰色边框 */
+}
+.dark .focus:ring-blue-500 {
+    --tw-ring-color: #60a5fa; /* 蓝色焦点边框 */
+}
+.dark .text-blue-600 {
+    color: #60a5fa; /* 蓝色文本 */
+}
+.dark .bg-blue-100 {
+    background-color: #eff6ff;
+}
+
+/* 添加自定义的深色模式下的 shadcn 样式 */
+.dark .card {
+    background-color: #1f2937; /* 深色卡片背景 */
+    border-color: #4b5563; /* 深色卡片边框 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2); /* 更柔和的阴影 */
+}
+.dark .card-header {
+    border-bottom-color: #4b5563; /* 深色卡片header边框 */
+}
+.dark .card-title {
+    color: #ffffff; /* 白色卡片标题 */
+}
+.dark .card-description {
+    color: #d1d5db; /* 稍浅的灰色卡片描述 */
+}
+.dark .card-content {
+    display:inline-block;
+    color: #e5e7eb;
+}
+
+.dark .input {
+    background-color: #374151; /* 深色输入框背景 */
+    color: #f9fafb; /* 浅色输入框文本 */
+    border-color: #6b7280; /* 深色输入框边框 */
+}
+.dark .input:focus {
+     border-color: #60a5fa; /* 蓝色焦点边框 */
+     box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+     outline: none;
+}
+
+.dark .button {
+    background-color: #4f46e5; /* 深蓝色按钮 */
+    color: #ffffff; /* 白色按钮文本 */
+}
+.dark .button:hover {
+    background-color: #4338ca; /* 更深的蓝色按钮悬停效果 */
+}
+.dark .button:disabled {
+    background-color: #6b7280; /* 灰色禁用按钮 */
+    cursor: not-allowed;
+}
+
+.dark .nav-link {
+    color: #d1d5db; /* 浅灰色导航链接 */
+}
+.dark .nav-link:hover {
+    color: #ffffff; /* 白色导航链接悬停效果 */
+}
+
+.dark .alert {
+    background-color: #374151; /* 深色警告框背景 */
+    border-color: #6b7280; /* 深色警告框边框 */
+    color: #f9fafb; /* 浅色警告框文本 */
+}
+.dark .alert-title {
+    color: #ffffff; /* 白色警告框标题 */
+}
+.dark .alert-description {
+    color: #d1d5db; /* 稍浅的灰色警告框描述 */
+}
+
+.dark .table {
+    background-color: #1f2937; /* 深色表格背景 */
+    border-color: #4b5563; /* 深色表格边框 */
+}
+.dark .table-header {
+    background-color: #374151; /* 深色表格header背景 */
+    color: #ffffff; /* 白色表格header文本 */
+}
+.dark .table-row {
+    border-bottom-color: #4b5563; /* 深色表格行边框 */
+}
+.dark .table-cell {
+    color: #e5e7eb; /* 浅灰色表格单元格文本 */
+}
+.dark .table-row:hover {
+     background-color: #374151; /* 深色表格行悬停效果 */
+}
+
+ .dark .select {
+    background-color: #374151; /* 深色选择框背景 */
+    color: #f9fafb; /* 浅色选择框文本 */
+    border-color: #6b7280; /* 深色选择框边框 */
+}
+
+.dark .select-trigger {
+    background-color: #374151;
+    color: #f9fafb;
+    border-color: #6b7280;
+}
+
+.dark .select-content {
+    background-color: #1f2937;
+    border-color: #4b5563;
+}
+
+.dark .select-item {
+    color: #e5e7eb;
+}
+
+.dark .select-item:hover, .dark .select-item[data-state="selected"] {
+    background-color: #4b5563;
+    color: #ffffff;
+}

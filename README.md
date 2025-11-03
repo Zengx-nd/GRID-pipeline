@@ -1,12 +1,14 @@
 # GRID Pipeline Project
 
 > 仓库维护者：**Zeng Xian, GRID team**
+
 > 用途：统一的 GRID 数据处理与可视化流水线（pipeline）工程，涵盖载荷处理、快速质检（quicklook）、与部署说明。
 
 ---
 
-## 目录结构
+## 项目目录结构
 
+```
 .
 ├─docs                          # 说明文档
 │  ├─GIRD-11B                   # GRID-11B 说明文档
@@ -32,6 +34,7 @@
 |   └─temp_bias_data            # 温度偏压标定数据
 |   
 | README.md                     # 本文件
+```
 
 ---
 
